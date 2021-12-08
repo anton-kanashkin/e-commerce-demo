@@ -1,0 +1,32 @@
+{
+  "$schema": "./node_modules/@tramvai/cli/schema.json",
+  "projects": {
+    "e-commerce-demo-front" : {
+      "name": "e-commerce-demo-front",
+      "root": "apps/e-commerce-demo-front",
+      "type": "application",
+      "commands": {
+        "build": {
+          "options": {
+            "server": "apps/e-commerce-demo-front/index.ts",
+            "vendor": "apps/e-commerce-demo-front/vendor.ts"
+          },
+          "configurations": {
+            "sourceMap": true,
+            "modern": true,
+            "granularChunks": true,
+            "postcss": {
+              "config": "apps/e-commerce-demo-front/postcss"
+            }
+          }
+        },
+        "serve": {
+          "configurations": {
+            "hotRefresh": true,
+            "modern": true
+          }
+        }
+      }
+    }
+  }
+}
